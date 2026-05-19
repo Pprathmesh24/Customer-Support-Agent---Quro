@@ -39,14 +39,14 @@ An agentic RAG (Retrieval-Augmented Generation) system where companies upload pr
 
 ## Demo
 
-The login page has two one-click demo buttons:
+The login page has a one-click **Login as Admin** button for reviewing the admin panel without signing up.
 
-| Button | What you see |
+| Path | What you see |
 |---|---|
-| **Login as Admin** | Upload documents, manage the knowledge base, view escalated tickets, track knowledge gaps |
-| **Login as User** | Chat with the AI support agent, receive cited answers, trigger escalations |
+| **Admin** (one-click) | Upload documents, manage the knowledge base, view escalated tickets, track knowledge gaps |
+| **User** (sign up) | Chat with the AI support agent, receive cited answers, trigger escalations |
 
-> **Note on roles:** In a real deployment, admin access is controlled by setting `{ role: "admin" }` in a user's Supabase `app_metadata` (writable only by the service role — not by the user themselves). The demo uses two pre-configured accounts to let reviewers explore both sides of the product without needing an invite flow.
+> **Note on roles:** In a real deployment, admin access is controlled by setting `{ role: "admin" }` in a user's Supabase `app_metadata` (writable only by the service role — not by the user themselves). The demo uses a pre-configured admin account so reviewers can explore the admin panel without an invite flow. Regular users sign up via the standard form.
 
 ---
 
