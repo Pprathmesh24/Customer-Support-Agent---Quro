@@ -1,7 +1,7 @@
 # Progress
 
 ## Current Step
-Step 9.2 — Environment variable audit
+Step 9.3 — Deploy FastAPI to Railway
 
 ## Completed Steps
 - **Step 1.1** — Created full project directory tree: `backend/`, `frontend/`, `supabase/`, `docs/`
@@ -43,9 +43,10 @@ Step 9.2 — Environment variable audit
 - **Step 5.1** — Created `app/agent/graph/state.py` (`AgentState` TypedDict: messages + conversation_id + user_id), `app/agent/graph/nodes.py` (`make_agent_node` closure factory + system prompt), `app/agent/graph/agent.py` (`build_graph()`: wires DocumentScope + Retriever + Escalation tools, LLM bind_tools, conditional edge on tool_calls, ToolNode prebuilt); graph compiled + agent invoked with empty KB → correctly called retriever → document_scope → escalation — "ReAct graph OK"
 - **Step 4.6** — Created `supabase/migrations/006_semantic_cache.sql` (`semantic_cache` table, HNSW index, `search_semantic_cache()` function) and `app/agent/cache.py` (SemanticCache: full LLM response cache, user-scoped, similarity threshold=0.45, TTL); all hits/misses/cross-user-isolation verified — "SemanticCache OK"
 
+- **Step 9.2** — Environment variable audit: fixed `CRISP_TOKEN_IDENTIFIER`/`CRISP_TOKEN_KEY` → `CRISP_IDENTIFIER`/`CRISP_KEY` in `.env.example` and `.env` (mismatch with `settings.py` field names); added missing `ALLOWED_ORIGINS` and `LLM_MODEL` to `.env.example`; `grep -r "sk-"` and `grep -r "eyJ"` on source files return zero results — "Env audit OK"
+
 ## Pending Steps
-9.2, 9.3, 9.4
-9.1, 9.2, 9.3, 9.4
+9.3, 9.4
 
 ## Decisions Log
 - **CLAUDE.md placement:** project root (not `docs/`) so Claude Code auto-discovers it every session.
