@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+customer-agent/
+*.egg-info/
+
+# Tests and dev scripts
+tests/
+scripts/
+
+# Env files
+.env
+.env.*
+
+# Misc
+.DS_Store

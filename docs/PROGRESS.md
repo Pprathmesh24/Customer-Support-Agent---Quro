@@ -1,7 +1,7 @@
 # Progress
 
 ## Current Step
-Step 9.3 — Deploy FastAPI to Railway
+Step 9.4 — Deploy Next.js to Vercel
 
 ## Completed Steps
 - **Step 1.1** — Created full project directory tree: `backend/`, `frontend/`, `supabase/`, `docs/`
@@ -45,8 +45,10 @@ Step 9.3 — Deploy FastAPI to Railway
 
 - **Step 9.2** — Environment variable audit: fixed `CRISP_TOKEN_IDENTIFIER`/`CRISP_TOKEN_KEY` → `CRISP_IDENTIFIER`/`CRISP_KEY` in `.env.example` and `.env` (mismatch with `settings.py` field names); added missing `ALLOWED_ORIGINS` and `LLM_MODEL` to `.env.example`; `grep -r "sk-"` and `grep -r "eyJ"` on source files return zero results — "Env audit OK"
 
+- **Step 9.3** — Created `backend/Dockerfile` (python:3.12-slim, uv, pre-downloads cross-encoder model at build time, `$PORT` from Railway); `backend/.dockerignore` excludes tests, scripts, venv; `/health` endpoint already existed — "Dockerfile ready"
+
 ## Pending Steps
-9.3, 9.4
+9.4
 
 ## Decisions Log
 - **CLAUDE.md placement:** project root (not `docs/`) so Claude Code auto-discovers it every session.
